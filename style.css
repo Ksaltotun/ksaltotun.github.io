@@ -1,9 +1,0 @@
-body{
-    height: 100vh;
-    overflow-x: auto;
-    background-color: bisque;
-}
-
-canvas {
-    border: 1px solid black;
-}
