@@ -68,7 +68,7 @@
 
     <script defer>
         async function getMetric(id, word) {
-
+            const metriks = {totals: '?'}
             try{
                 const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
                 headers: {
@@ -76,8 +76,7 @@
                 }
             })
 
-            const metriks = await data.json()
-
+            metriks = await data.json()
             
             } catch {
                 console.error('что-то пошло не так!!!!')
@@ -91,7 +90,6 @@
             const body = document.querySelector('body')
 
             body.appendChild(shild)
-
 
         }
 
