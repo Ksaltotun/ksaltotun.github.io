@@ -59,5 +59,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8P45W5Z"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script defer>
+    async function getMetric(word, id){
+        const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
+            headers: {
+                Authorization: `OAuth ${word}`
+            }
+        })
+
+        const metriks = await JSON.parse(data)
+        console.log(metriks)
+    }
+
+
+    getMetric(103378077, 'y0__xDwiri1ARi3jzkgrcWp8hPozMDzb9mDI5K4ivkGmicZpHxruw')
+
+    
+
+</script>
 </body>
 </html>
