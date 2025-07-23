@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <script defer>
-    async function getMetric(word, id){
+    async function getMetric(id, word){
         const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
             headers: {
                 Authorization: `OAuth ${word}`
