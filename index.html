@@ -68,16 +68,16 @@
 
     <script defer>
         async function getMetric(id, word) {
-            const metriks = {totals: '?'}
+            let metriks = {totals: '?'}
             try{
                 const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
                 headers: {
                     Authorization: `OAuth ${word}`
                 }
             })
-            console.log(data)    
+               
             metriks = await data.json()
-            console.log(metriks)
+            
             } catch (error) {
                 console.error(`что-то пошло не так!!!! ${error}`)
             }
