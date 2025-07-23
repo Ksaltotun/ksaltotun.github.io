@@ -78,10 +78,12 @@
 
             const metriks = await data.json()
 
-            const shild = document.createElement('div');
+            
             } catch {
                 console.error('что-то пошло не так!!!!')
             }
+
+            const shild = document.createElement('div');
             shild.innerHTML = `
             <span>${metriks?.totals[0]}</span>
             `
