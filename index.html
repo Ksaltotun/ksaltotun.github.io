@@ -69,7 +69,8 @@
     <script defer>
         async function getMetric(id, word) {
 
-            const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
+            try{
+                const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
                 headers: {
                     Authorization: `OAuth ${word}`
                 }
@@ -78,6 +79,9 @@
             const metriks = await data.json()
 
             const shild = document.createElement('div');
+            } catch {
+                console.error('что-то пошло не так!!!!')
+            }
             shild.innerHTML = `
             <span>${metriks?.totals[0]}</span>
             `
