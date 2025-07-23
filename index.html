@@ -78,8 +78,8 @@
             console.log(data)    
             metriks = await data.json()
             console.log(metriks)
-            } catch {
-                console.error('что-то пошло не так!!!!')
+            } catch (error) {
+                console.error(`что-то пошло не так!!!! ${error}`)
             }
 
             const shild = document.createElement('div');
