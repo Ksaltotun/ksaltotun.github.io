@@ -69,9 +69,10 @@
 
     <script defer>
         async function getMetric(id, word) {
+            const today = new Date().toISOString().split('T')[0];
             let metriks = { totals: '?' }
             try {
-                const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
+                const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?id=${id}&date1=${today}&date2=${today}`, {
                     headers: {
                         Authorization: `OAuth ${word}`
                     }
@@ -98,6 +99,9 @@
             body.appendChild(shild)
         }
         getMetric(103378077, 'y0__xDwiri1ARi3jzkgrcWp8hPozMDzb9mDI5K4ivkGmicZpHxruw')
+
+
+
     </script>
 
     <style>
