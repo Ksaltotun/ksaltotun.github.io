@@ -69,16 +69,11 @@
     <script defer>
         async function getMetric(id, word) {
 
-            try {
-                const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
-                    headers: {
-                        Authorization: `OAuth ${word}`
-                    }
-                })
-            } catch {
-                console.error('Это вилы!!! Ошибка фетча')
-                return 1
-            }
+            const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
+                headers: {
+                    Authorization: `OAuth ${word}`
+                }
+            })
 
             const metriks = await data.json()
 
@@ -91,7 +86,7 @@
 
             body.appendChild(shild)
 
-            
+
         }
 
 
