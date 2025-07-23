@@ -80,14 +80,7 @@
                 return 1
             }
 
-            try {
-                console.log(data)
-                const metriks = await data.json()
-                console.log(metriks)
-            } catch {
-                console.error('JSON не парсится!!!')
-                return 2    
-            }
+            const metriks = await data.json()
 
             const shild = document.createElement('div');
             shild.innerHTML = `
