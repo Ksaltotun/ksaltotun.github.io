@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             margin-top: 100px;
             background-color: #f0f0f0;
         }
+
         h1 {
             color: #333;
             font-size: 3em;
@@ -23,60 +25,88 @@
     <h1>Привет, мир! 👋</h1>
     <p>Это моя первая страница на GitHub Pages</p>
     <!-- Yandex.Metrika informer -->
-<a href="https://metrika.yandex.ru/stat/?id=103377860&amp;from=informer" target="_blank" rel="nofollow">
-    <img src="https://informer.yandex.ru/informer/103377860/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-         style="width:88px; height:31px; border:0;"
-         alt="Яндекс.Метрика"
-         title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
-        class="ym-advanced-informer" data-cid="103377860" data-lang="ru"/>
-</a>
-<!-- /Yandex.Metrika informer -->
+    <a href="https://metrika.yandex.ru/stat/?id=103377860&amp;from=informer" target="_blank" rel="nofollow">
+        <img src="https://informer.yandex.ru/informer/103377860/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+            style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+            title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+            class="ym-advanced-informer" data-cid="103377860" data-lang="ru" />
+    </a>
+    <!-- /Yandex.Metrika informer -->
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103377860', 'ym');
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=103377860', 'ym');
 
-    ym(103377860, 'init', {ssr:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103377860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+        ym(103377860, 'init', { ssr: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/103377860" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N8P45W5Z');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N8P45W5Z');</script>
+    <!-- End Google Tag Manager -->
 
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8P45W5Z"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8P45W5Z" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<script defer>
-    async function getMetric(id, word){
-        const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
-            headers: {
-                Authorization: `OAuth ${word}`
+    <script defer>
+        async function getMetric(id, word) {
+
+            try {
+                const data = await fetch(`https://api-metrika.yandex.net/stat/v1/data?preset=sources_summary&id=${id}`, {
+                    headers: {
+                        Authorization: `OAuth ${word}`
+                    }
+                })
+            } catch {
+                console.error('Это вилы!!! Ошибка фетча')
+                return 1
             }
-        })
 
-        const metriks = await data.json()
-        console.log(metriks)
-    }
+            try {
+                const metriks = await data.json()
+                console.log(metriks)
+            } catch {
+                console.error('JSON не парсится!!!')
+                return 2    
+            }
+
+            const shild = document.createElement('div');
+            shild.innerHTML = `
+            <span>${metriks?.totals[0]}</span>
+            `
+
+            const body = document.querySelector('body')
+
+            body.appendChild(shild)
+
+            
+        }
 
 
-    getMetric(103378077, 'y0__xDwiri1ARi3jzkgrcWp8hPozMDzb9mDI5K4ivkGmicZpHxruw')
 
-    
+        getMetric(103378077, 'y0__xDwiri1ARi3jzkgrcWp8hPozMDzb9mDI5K4ivkGmicZpHxruw')
 
-</script>
+
+
+    </script>
 </body>
+
 </html>
